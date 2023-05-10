@@ -32,4 +32,22 @@ const questions = [
         name: 'shapeColor',
         message: 'Enter the shape color (keyword or hexadecimal number):'
     }
-]
+];
+
+// Created a prompt module based on the "questions" array defined above.
+inquirer.createPromptModule(questions).then(({text, textcolor, shapeType, shapeColor}) => {
+    let shape;
+
+    switch (shapeType) {
+        case 'Triangle':
+            shape = new Triangle();
+            break;
+        case 'Circle':
+            shape = new Circle();
+            break;
+        default:
+            shape = new Square();
+            break;     
+    }
+}
+)
