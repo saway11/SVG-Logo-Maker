@@ -27,4 +27,9 @@ const questions = [
         message: 'Select a shape:',
         choices: ['Triangle', 'Circle', 'Square']
     },
+    {
+        type: 'input',
+        name: 'shapeColor',
+        message: 'Enter the shape color (keyword or hexadecimal number):'
+    }
 ]
