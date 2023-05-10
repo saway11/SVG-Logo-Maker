@@ -20,5 +20,11 @@ const questions = [
         type: 'input',
         name: 'textColor',
         message: 'Enter the text color (keyword or hexadecimal number:'
-    }
+    },
+    {
+        type: 'list',
+        name: 'shapeType',
+        message: 'Select a shape:',
+        choices: ['Triangle', 'Circle', 'Square']
+    },
 ]
