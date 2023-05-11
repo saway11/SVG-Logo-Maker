@@ -49,5 +49,17 @@ inquirer.createPromptModule(questions).then(({text, textcolor, shapeType, shapeC
             shape = new Square();
             break;     
     }
-}
-)
+// setting the color of the same object. 
+// The writeFile method returns a promise which is chained to .then method to log a success
+// message to the console once the file has been written.
+// If there is an error at any point in the chain it will be caught
+// and the error message will be logged to the console.
+shape.setColor(shapeColor)
+const svg = new SVG()
+svg.setText(text, textColor)
+svg.setShape(shape)
+return writeFile('./examples/logo.svg', svg.render)
+})
+.then(() => console.log("Generated logo.svg"))
+
+.catch(err => console.log(err));
