@@ -51,7 +51,29 @@ async function promptUser() {
                 return "Please enter a valid color keyword or hexadecimal number.";
             },
         }
-    ]
+    ];
+
+    // using inquirer package to prompt the user with a set of questions defined in the 
+    // questions variable
+    const answer = await inquirer.prompt(questions);
+    return answers;
+}
+
+// allows user to input answers while gathering all the answers
+// and pushing them into the logoMaker class
+// the logoMaker class is used to generate the logo and save is to
+// the logo file
+async function main() {
+    const answers = await promptUser();
+    const logoMaker = new LogoMaker(
+        answers.text,
+        answers.textColor,
+        answers.shape,
+        answers.shapeColor
+    );
+    const svgMarkup = logoMaker.generateLogo();
+    saveSVGToFile(svgMarkup);
+    console.log("Generated logo.svg");
 }
 
 })
