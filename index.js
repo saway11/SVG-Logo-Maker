@@ -76,4 +76,10 @@ async function main() {
     console.log("Generated logo.svg");
 }
 
-})
+// creating file that contains the svg logo
+function saveSVGToFile(svgMarkup) {
+    fs.writeFileSync("logo.svg", svgMarkup, "utf8");
+}
+
+main();
+})();
