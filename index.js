@@ -39,4 +39,16 @@ const questions = [
 // the questions array as an argument. 
 inquirer.createPromptModule(questions).then(({text, textColor, shapeType, shapeColor}) => {
     let shape;
+
+    switch (shapeType) {
+        case 'Triangle':
+            shape = new Triangle();
+            break;
+        case 'Circle':
+            shape = new Circle();
+            break;
+        default:
+            shape = new Square();
+            break;
+    }
 })
