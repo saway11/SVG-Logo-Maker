@@ -53,7 +53,9 @@ inquirer.createPromptModule(questions).then(({text, textColor, shapeType, shapeC
 
     }
 // setting the color of the shape object using the setColor() method, passing the
-// setColor value as an argument. A new SVG 
+// setColor value as an argument. A new SVG object was created and its 'setText()'
+// method is called, passing the 'text' and 'textColor values as arguments. The 
+// 'writeFile() function writes the rendered SVG content to the file
 shape.setColor(shapeColor)
 const svg = new SVG()
 svg.setText(text, textColor)
