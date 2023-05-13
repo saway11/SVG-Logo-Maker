@@ -16,7 +16,7 @@ Install node.js and clone to Github repo
 # Usage
 Generating a simple logo for my project so that the user does not have to pay for a graphic designer
 # Functionality Video
-
+https://drive.google.com/file/d/11Kh5DwlyDF39R2lcQpZzCgc6ZquoNvks/view
 # License 
 This project is licensed under the MIT license. To learn more please visit https://choosealicense.com/licenses/mit.
 # Contributing
